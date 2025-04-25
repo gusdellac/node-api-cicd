@@ -1,13 +1,12 @@
-version: '3.8'
-
 services:
   api:
     build: .
-    container_name: node-api-cicd
+    container_name: ${CONTAINER_NAME:-node-api-cicd}
     ports:
-      - "${PORT_HOST:-3000}:${PORT_CONTENEDOR:-3000}"
+      - "${PORT:-5000}:${PORT:-5000}"
     environment:
       - NODE_ENV=${NODE_ENV:-development}
+      - PORT=${PORT:-5000}
     volumes:
       - .:/app
     command: ${START_CMD:-npm run dev}
