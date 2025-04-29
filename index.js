@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Ruta de prueba GET
 app.get('/', (req, res) => {
-  res.send(`ENVIRONMENT ${environment} - API OK`);
+  res.send(`[ENVIRONMENT ${environment}] - [API OK]`);
 });
 
 // Levantar el servidor escuchando en todas las interfaces para que el host
@@ -21,4 +21,3 @@ app.get('/', (req, res) => {
 app.listen(port, '0.0.0.0', () => {
   console.log(`ENVIRONMENT ${environment} - API listening en http://localhost:${port}`);
 });
-

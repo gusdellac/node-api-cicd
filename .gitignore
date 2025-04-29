@@ -137,3 +137,4 @@ dist
 .pnp.*
 
 .devcontainer/
+publish.docker.ej.yml
