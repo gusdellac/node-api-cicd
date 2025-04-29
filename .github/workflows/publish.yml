@@ -20,6 +20,6 @@ jobs:
           password: ${{ secrets.TOKEN_ACTIONS }}
 
       - name: Build Image
-        run:
-          docker build -t ghcr.io/gusdellac/node-api-cicd:latest .
+        run: |
+          docker build . --tag ghcr.io/gusdellac/node-api-cicd:latest
           docker push ghcr.io/gusdellac/node-api-cicd
