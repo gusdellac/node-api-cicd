@@ -21,5 +21,5 @@ jobs:
 
       - name: Build Image
         run:
-          docker build . --tag ghcr.io/gusdellac/node-api-cicd:latest
+          docker build -t ghcr.io/gusdellac/node-api-cicd:latest .
           docker push ghcr.io/gusdellac/node-api-cicd
