@@ -21,3 +21,5 @@ app.get('/', (req, res) => {
 app.listen(port, '0.0.0.0', () => {
   console.log(`ENVIRONMENT ${environment} - API listening en http://localhost:${port}`);
 });
+
+console.log('test')
